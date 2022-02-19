@@ -53,15 +53,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 //CODE HERE
 function canWeDeliver(zipCode) {
     if (deliveryAreaZipCodes.includes(zipCode)) {
-        console.log(`You're in our delivery zone!`)
+        return `You're in our delivery zone!`
     } else {
-        console.log(`Sorry, we can't deliver to that address`)
+        return `Sorry, we can't deliver to that address`
     }
         
 }  
 
-canWeDeliver(84606)
-canWeDeliver(85205)
+console.log(canWeDeliver(84606))
+console.log(canWeDeliver(85205))
 
 /* 
     Problem 2 Continued
@@ -84,9 +84,9 @@ canWeDeliver(85205)
 function canWeDeliverTwo(zipCode) {
     for (let i = 0; i < deliveryAreaZipCodes.length; i++)
         if (deliveryAreaZipCodes[i] === zipCode) {
-            console.log(`You're in our delivery zone!`)
+            return `You're in our delivery zone!`
     } else {
-        console.log(`Sorry, we can't deliver to that address`)
+        return `Sorry, we can't deliver to that address`
     }
         
 }  
@@ -127,8 +127,11 @@ const deals = [
 */
 
 //CODE HERE
-const newDeal = deals.splice(0, 1, {title: '10% Off!', desc: 'Applied to your entire order when you spend $30 or more'})
-console.log(deals)
+deals[0].title = deals[0].title.replace(15, 10)
+console.log(deals[0]['title'])
+
+// const newDeal = deals.splice(0, 1, {title: '10% Off!', desc: 'Applied to your entire order when you spend $30 or more'})
+// console.log(deals)
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -143,10 +146,10 @@ console.log(deals)
 */
 
 //CODE HERE
-const newDesc = deals.splice(1,1, {title: 'Free Kids Meal with 2 Regular Entrees', desc: '   This deal lasts until the end of April! '.trim()})
-console.log(deals)
-
-
+// const newDesc = deals.splice(1,1, {title: 'Free Kids Meal with 2 Regular Entrees', desc: '   This deal lasts until the end of April! '.trim()})
+// console.log(deals)
+deals[1].desc = deals[1].desc.trim().replace("March", "April")
+console.log(deals[1]['desc'])
 
 
 
