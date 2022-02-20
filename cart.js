@@ -84,7 +84,10 @@ console.log(calcFinalPrice(subtotal, 5, .05))
 
 /*
     TEXT ANSWER HERE
-    // 
+    first we need a name and a last name, we need to be able to make this file for them because the cart needs
+    to know if the customer is enrolled in the rewards program. The customer also needs an email address to access
+    his profile to keep track of his rewards program. and last we need a verificator to check if the customer is a 
+    rewards account holder. 
 
 
 */
@@ -95,3 +98,17 @@ console.log(calcFinalPrice(subtotal, 5, .05))
 */
 
 //CODE HERE
+
+const customer = {
+    firstName: 'John',
+    lastName: 'Smith',
+    email: 'john@smith.com',
+    enrolled: "enrolled",
+    checkEnrollment: function(){
+        return customer.firstName + ' ' + customer.lastName + ' is ' + customer.enrolled
+
+    }
+
+    }
+
+    console.log(customer.checkEnrollment())
