@@ -156,10 +156,11 @@ const foodArr = [
     your food objects has.
 */
 
-//CODE HERE
-const filteredFood = foodArr.filter(tags)
-console.log(filteredFood)
+// //CODE HERE
 
+const result = foodArr.filter(foodArr => foodArr.tags.includes("kids"));
+
+console.log(result)
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -201,35 +202,16 @@ console.log(filteredFood)
 
 //CODE HERE
 function filterByProperty(property, number, type) {
-        let filtered = foodArr.filter((element) => {if(type === 'above') {
-                if(element[property] > number) {
-                  
-                }
-        }
-    })
-            return filtered
-    } 
-    
+    let filtered = foodArr.filter((element) => {if(type === 'above') {
+            if(element[property] > number) {
+              
+            }
 
-
-let newFilter = new filterByProperty("price", 2, 'above')
-console.log(newFilter)
-
-
-
-
-
-// function filterByProperty(property, number, type) {
-//     let filtered = foodArr.filter((element) => {if(type === 'above') {
-//             if(element[property] > number) {
-//               
-//             }
-
-//     }
+    }
         
-// })
-//         return filtered
-// }
+})
+        return filtered
+}
 
 
 
